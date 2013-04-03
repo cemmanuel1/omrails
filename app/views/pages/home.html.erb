@@ -1,16 +1,35 @@
-<div class="hero-unit">
-	<h1 class="text-center"> Travel Bug!</h1>
+<% if user_signed_in? %>
+	<div class="hero-unit">
+		<h1 class="text-center"> Trippin!</h1>
 	
-	<h2>
-	Would you like too...
-	</h2>
+		<h2>
+		Would you like too...
+		</h2>
 
-	<p>
-	<p>
-	<%= link_to "Share a Trip", "#", class: "btn btn-primary btn-large"%>
-<large> or
-</large>
-	<%= link_to "Plan a Trip", "#", class: "btn btn-primary btn-large" %>
-	</p>
-	</p>
-</div>
+		<p>
+		<p>
+		<%= link_to "Share a Trip", "#", class: "btn btn-primary btn-large"%>
+	<large> or
+	</large>
+		<%= link_to "Plan a Trip", "#", class: "btn btn-primary btn-large" %>
+		</p>
+		</p>
+	</div>
+
+	<% else %>
+	
+	<div class="hero-unit">
+		<h1 class="text-center"> Trippin!</h1>
+		
+		<h2>
+		Welcome to Trippin
+		</h2>
+
+		<p>
+		<p>
+		<%= link_to "Sign Up Now!", new_user_registration_path, class: "btn btn-primary btn-large"%>
+		</p>
+		</p>
+	</div>
+
+<%end%>
